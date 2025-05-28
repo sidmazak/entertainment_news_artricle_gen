@@ -997,7 +997,7 @@ export default function EntertainmentNewsGenerator() {
                 {/* Generate Button */}
                 <Button
                   onClick={handleGenerate}
-                  disabled={!formData.keyword || !formData.apiKey || isGenerating}
+                  disabled={!formData.apiKey || (!formData.keyword && !formData.url) || isGenerating}
                   className="w-full h-12 text-lg"
                   size="lg"
                 >
